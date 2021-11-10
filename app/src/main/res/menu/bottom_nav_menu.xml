@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_entry_exit"
+        android:icon="@drawable/ic_baseline_toll_24"
+        android:title="@string/entry_exit" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/nav_transaction_history"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/transaction_history" />
+</menu>

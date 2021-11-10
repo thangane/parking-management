@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="title">15sp</dimen>
+    <dimen name="dialog_title">20sp</dimen>
+    <dimen name="floor_card_height_size">100dp</dimen>
+    <dimen name="card_title">25sp</dimen>
+
+</resources>

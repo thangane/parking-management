@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.com.parkingmanagement">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".ParkingManagementApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ParkingManagement">
+        <activity android:name=".presentation.home.MainHomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.floor_list.FloorListActivity" />
+        <activity
+            android:name=".presentation.coupon.CouponActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".presentation.parking_charges.ParkingChargesActivity" />
+        <activity android:name=".presentation.entry_exit.EntryExitActivity" />
+    </application>
+
+</manifest>

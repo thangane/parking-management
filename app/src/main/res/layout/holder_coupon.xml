@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="couponViewModel"
+            type="app.com.parkingmanagement.presentation.coupon.CouponViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/coupon_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/coupon_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/coupon_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/coupon_icon_description"
+                    android:src="@drawable/ic_baseline_card_giftcard_24" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/coupon_code_title"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{couponViewModel.coupon.code}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/coupon_start_at_title"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{couponViewModel.coupon.getStartDate()}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/coupon_end_at_title"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{couponViewModel.coupon.getEndDate()}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/coupon_invalidate_icon"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/coupon_delete_icon"
+                android:contentDescription="@string/floor_icon_description"
+                android:src="@drawable/ic_baseline_auto_delete_24" />
+
+            <ImageView
+                android:id="@+id/coupon_delete_icon"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/floor_icon_description"
+                android:src="@drawable/ic_baseline_delete_forever_24" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
